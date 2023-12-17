@@ -7,9 +7,9 @@
 This project consists of using various git commands to push updates to github. 
 
 ### Files used
-bikeshare.py
-chicago.csv
-new_york_city.csv
-washington.csv
+bikeshare.py <br />
+chicago.csv <br />
+new_york_city.csv <br />
+washington.csv <br />
 
 
