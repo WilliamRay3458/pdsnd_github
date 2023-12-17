@@ -108,12 +108,10 @@ def station_stats(df):
     start_time = time.time()
 
     print('\nThe most popular starting stations are:\n\n', df['Start Station'].value_counts().nlargest(1).index[0])
-    # See readme.txt.
 
     print('\nThe most popular ending stations are:\n\n', df['End Station'].value_counts().nlargest(1).index[0])
 
     most_frequent_trip = df.groupby(['Start Station', 'End Station']).size().idxmax()
-    # See readme.txt.
 
     print('\nThe most frequent trip taken is:\n', most_frequent_trip)
 
