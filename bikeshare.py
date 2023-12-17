@@ -36,6 +36,7 @@ def get_filters():
         month = input('Please enter a valid month selection.\n').lower()
 
     dotw = input('Please enter the day of the week you would like to see data on. Enter "all" for every day.\n').lower()
+    # "dotw" is short for day of the week.
     while dotw != 'all' and dotw not in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
         print("I'm sorry that is not a valid day.\n")
         dotw = input('Please enter a day of the week or enter "all" for the data you would like to see.\n').lower()
