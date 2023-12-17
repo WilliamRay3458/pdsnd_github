@@ -109,12 +109,10 @@ def station_stats(df):
     start_time = time.time()
 
     print('\nThe most popular starting stations are:\n\n', df['Start Station'].value_counts().nlargest(1).index[0])
-    # See readme.txt.
 
     print('\nThe most popular ending stations are:\n\n', df['End Station'].value_counts().nlargest(1).index[0])
 
     most_frequent_trip = df.groupby(['Start Station', 'End Station']).size().idxmax()
-    # See readme.txt.
 
     print('\nThe most frequent trip taken is:\n', most_frequent_trip)
 
@@ -162,13 +160,13 @@ def user_stats(df, city):
 
 def display_data(df):
     """Displays raw data upon user request"""
-    start_loc = 0
-    end_loc = 5
+    start_locaion = 0
+    end_location = 5
     view_data = input('\nWould you like to view 5 rows of trip data? Enter "yes" or "no".\n').lower()
     if view_data == 'yes':
-        while start_loc < len(df):
-            print('\n5 rows of the requested data:\n', df.iloc[start_loc: start_loc + end_loc])
-            start_loc += 5
+        while start_location < len(df):
+            print('\n5 rows of the requested data:\n', df.iloc[start_location: start_location + end_location])
+            start_location += 5
             more_data = input('\nDo you wish to view the next 5 rows? Enter "yes" or "no"\n').lower()
             if more_data != 'yes':
                 break
