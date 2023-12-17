@@ -161,13 +161,13 @@ def user_stats(df, city):
 
 def display_data(df):
     """Displays raw data upon user request"""
-    start_loc = 0
-    end_loc = 5
+    start_locaion = 0
+    end_location = 5
     view_data = input('\nWould you like to view 5 rows of trip data? Enter "yes" or "no".\n').lower()
     if view_data == 'yes':
-        while start_loc < len(df):
-            print('\n5 rows of the requested data:\n', df.iloc[start_loc: start_loc + end_loc])
-            start_loc += 5
+        while start_location < len(df):
+            print('\n5 rows of the requested data:\n', df.iloc[start_location: start_location + end_location])
+            start_location += 5
             more_data = input('\nDo you wish to view the next 5 rows? Enter "yes" or "no"\n').lower()
             if more_data != 'yes':
                 break
